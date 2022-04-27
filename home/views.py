@@ -11,8 +11,10 @@ def home(request):
     return render(request, 'home.html', params)
 
 def project(request):
+    home_item = Home.objects.filter(preview=True)
     projects = Project.objects.filter(preview=True)
     params = {
+        'about' : home_item,
         'projects' : projects,
     }
     return render(request, 'projects.html', params)
