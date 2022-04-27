@@ -1,0 +1,25 @@
+<nav class="navbar is-black is-fixed-top" role="navigation" aria-label="main navigation" id="navbar">
+    <div class="container">
+        <!-- logo or branding image on left side -->
+        <div class="navbar-brand"> <a class="navbar-item" href="/"> <img
+                    src="{% for i in about %}{{i.logo_link}}{% endfor %}"><strong>&nbsp;
+                    Hanzla Anjum</strong> </a>
+            <div class="navbar-burger" data-target="navbar-menu"> <span></span> <span></span> <span></span></div>
+        </div><!-- children of navbar-menu must be navbar-start and/or navbar-end -->
+        <div class="navbar-menu has-background-black" id="navbar-menu">
+            <!-- navbar items | left side -->
+            <!--<div class="navbar-start"></div>-->
+            <!-- navbar items | right side -->
+            <div class="navbar-end"> <a class="navbar-item is-active" href="/">HOME</a> <a class="navbar-item"
+                    href="#about">ABOUT</a> <a class="navbar-item" href="#contact">CONTACT</a> <a
+                    class="navbar-item" href="/links">LINKS</a>
+                <div class="navbar-item has-dropdown is-hoverable"> <a class="navbar-link"> MORE </a>
+                    <div class="navbar-dropdown has-background-black is-left"> <a href="/project"
+                            class="navbar-item has-text-grey-light "> Projects </a>
+                        {% comment %} <hr class="navbar-divider"> <a class="navbar-item"> Report an issue </a> {% endcomment %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav><!-- Bulma Navbar JS -->

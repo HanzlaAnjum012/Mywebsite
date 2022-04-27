@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Include Meta Tags Here -->
+    <meta charset="UTF-8">
+    <meta http-equiv="content-language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1 user-scalable=no, shrink-to-fit=no">
+    <meta content='#000000' name='theme-color' />
+    <meta name="keywords" content="Hanzla Anjum, HanzlaAnjum, Hanzla, Anjum, Hanzla Anjum yt, HanzlaAnjum0012, coder">
+    <title>Hanzla Anjum</title><!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta name="og:title" content="Hanzla Anjum">
+    <meta name="og:description" content="Passionate Coder With Imagination">
+    <meta name="og:image" content="/assets/images/post.jpg">
+    <meta name="og:image:alt" content="Hanzla Anjum">
+    <meta name="og:url" content="/">
+    <meta name="article:author" content="https://www.facebook.com/">
+    <meta name="og:site_name" content="Hanzla Anjum">
+    <meta name="og:type" content="website"> <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hanzla Anjum">
+    <meta name="twitter:description" content="Passionate Coder With Imagination">
+    <meta name="twitter:site" content="@Hanzlaanjum1">
+    <meta name="twitter:creator" content="@Hanzlaanjum1">
+    <meta name="twitter:image:src" content="/assets/images/post.jpg"> <!-- Search Engine -->
+    <meta name="description" content="Passionate Coder With Imagination">
+    <meta name="image" content="/assets/images/post.jpg"> <!-- Schema.org for Google -->
+    <meta itemprop="name" content="Hanzla Anjum">
+    <meta name="author" content="Hanzla Anjum" />
+    <meta itemprop="description" content="Passionate Coder With Imagination">
+    <meta itemprop="image" content="/assets/images/post.jpg"> <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!--Typed.js-->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <title>Hanzla Anjum</title>
+    <script src="https://kit.fontawesome.com/6a97161b76.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="{% for i in about %}{{i.shortuct_icon_link}}{% endfor %}" type="image/x-icon">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+        @import url("https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css");
+
+        html,
+        body {
+            font-family: "Poppins", sans-serif;
+            scroll-behavior: smooth !important;
+            transition: all 0.25s ease;
+        }
+
+        ::-webkit-scrollbar {
+            width: 0.5vmax !important;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: white !important;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #363636 !important;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: black !important;
+        }
+
+        ::placeholder {
+            font-family: "Poppins", sans-serif;
+        }
+
+        #navbar .navbar-burger span:nth-child(2) {
+            left: calc(50%);
+            width: 8px;
+        }
+
+        .is-active {
+            font-weight: bold;
+        }
+
+        .columns .button {
+            margin: 0.5rem !important;
+        }
+
+        hr {
+            margin: 1rem auto;
+            height: 1px;
+        }
+
+        .column {
+            margin: auto 0.5rem;
+            padding: 0.5rem;
+        }
+
+        .searchResult a .title {
+            text-decoration: underline;
+        }
+
+        .hvr-grow {
+            display: inline-block;
+            vertical-align: middle;
+            transform: translateZ(0);
+            box-shadow: 0 0 1px transparent;
+            backface-visibility: hidden;
+            -moz-osx-font-smoothing: grayscale;
+            transition-duration: 0.3s;
+            transition-property: transform;
+        }
+
+        .hvr-grow:hover,
+        .hvr-grow:focus,
+        .hvr-grow:active {
+            transform: scale(1.5);
+        }
+
+        #navbar {
+            opacity: 0.95;
+        }
+
+        .is-active {
+            font-weight: 600;
+        }
+
+        .navbar-dropdown {
+            border: none;
+            right: 0;
+            left: auto;
+        }
+
+        a.navbar-item:hover,
+        .navbar-link:hover {
+            background-color: rgba(255, 255, 255, 0.25) !important;
+            color: white !important;
+        }
+
+        a.navbar-item.is-active {
+            background-color: rgba(255, 255, 255, 0.25) !important;
+            color: white !important;
+        }
+
+        a.navbar-item.is-active:hover {
+            background-color: rgba(255, 255, 255, 0.25) !important;
+            color: grey;
+        }
+
+        .navbar-link:not(.is-arrowless)::after {
+            border-color: grey;
+        }
+
+        #hero {
+            background: #000;
+            background: -moz-linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.75) 100%);
+            background: -webkit-linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.75) 100%);
+            background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.75) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=1);
+        }
+
+        #hero::before {
+            filter: blur(0.15rem);
+            background-image: url(https://i.redd.it/sr72l7leq5181.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            position: absolute;
+            opacity: 1;
+            content: "";
+
+        }
+
+        .title {
+            margin: auto 0.75rem !important;
+        }
+
+        .subtitle {
+            letter-spacing: 0.25rem;
+        }
+
+        #about .image {
+            max-width: 20vmax;
+            margin: auto;
+        }
+
+        #about .image img {
+            border: 0.25rem dotted white;
+            transition: all 0.25s ease;
+        }
+
+        #about .image img:hover {
+            transition: all 0.25s ease;
+            transform: scale(1.05);
+        }
+
+        #about a {
+            min-width: 25vmax;
+            margin: 0.5rem;
+        }
+
+        #contact #contact-button {
+            margin: 0.5rem auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        #contact svg {
+            transition: all 0.15s ease-in-out;
+            margin: auto 0.75vmax;
+        }
+
+        #contact svg:hover {
+            transform: scale(1.1);
+            filter: opacity(0.75);
+        }
+
+        #contact hr {
+            background-color: black;
+        }
+
+        #blog .hero-body {
+            padding: 3rem 0.25rem 1rem 0.25rem;
+        }
+
+        #blog .container {
+            margin: 1.5rem auto;
+        }
+
+        #blog #blog-card {
+            transition: all 0.25s ease;
+            margin-bottom: 0.5vmax;
+            transform: scale(0.85);
+            margin-right: 2.5vmax;
+            margin-left: 2.5vmax;
+            line-height: normal;
+            border-radius: 0.25rem;
+            -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+            -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        #blog #blog-card:hover {
+            transform: scale(0.875);
+            -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.25);
+            -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.25);
+        }
+
+        @media (max-width: 768px) {
+            #blog #blog-card {
+                transform: scale(1);
+                margin-bottom: 5vmax !important;
+            }
+
+            #blog #blog-card:hover {
+                transform: scale(1.025);
+                margin-bottom: 5vmax !important;
+                -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.25);
+                -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.25);
+                box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.25);
+            }
+
+            #blog #blog-card .image {
+                padding-top: 50% !important;
+            }
+        }
+
+        #blog #blog-card .title {
+            margin: 0.5rem !important;
+        }
+
+        #blog #blog-card .content {
+            margin: 0.5rem;
+        }
+
+        #blog #blog-card .column {
+            display: grid;
+        }
+
+        #blog #blog-card .column .image {
+            border-radius: 0.25rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #search {
+            border-bottom: 0.15rem solid;
+        }
+
+        #search input {
+            border: none;
+            outline: none;
+            font-weight: 500 !important;
+        }
+
+        #search input::placeholder {
+            font-weight: 500;
+            color: grey;
+            letter-spacing: 0.25rem;
+        }
+
+        #search .button {
+            transition: all 0.25s ease;
+            border: none;
+        }
+
+        #search .button:focus {
+            outline: 0.25rem solid white;
+        }
+
+        #footer #backtotop {
+            transition: all 0.25s ease;
+            width: 10rem;
+            padding: 0.25rem;
+            margin: auto auto 1rem auto;
+        }
+
+        #footer #backtotop:hover {
+            transform: scale(1.05);
+        }
+
+        #footer .container {
+            margin: auto;
+            padding: 1.5rem;
+            line-height: 1.25;
+        }
+
+        #footer .container .column {
+            display: grid;
+            justify-content: center;
+        }
+
+        #footer .container .column li {
+            list-style: circle;
+            list-style-position: outside;
+        }
+
+        #footer .container .column a {
+            color: #7a7a7a;
+        }
+
+        #footer .container .column a:hover {
+            color: white;
+        }
+
+        #footer .container .column figure {
+            border: 1.5px solid white;
+            border-radius: 50rem;
+            justify-content: center;
+            margin: auto;
+            transition: all 0.25s ease;
+        }
+
+        #footer .container .column figure:hover {
+            transform: scale(1.15);
+        }
+
+        #footer #credits {
+            padding: 0.75rem;
+            font-size: 0.85rem;
+        }
+
+        #footer #credits a {
+            text-decoration: underline;
+            font-weight: bolder;
+            color: white;
+        }
+
+        #project .columns .column {
+            background: black;
+        }
+
+        #project .columns .column .image {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #project #project-card {
+            -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+            -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+            transform: scale(0.95);
+            transition: all 0.5s ease;
+            margin-bottom: 0.5rem !important;
+            display: inline-table;
+        }
+
+        #project #project-card:hover {
+            transform: scale(0.975);
+        }
+
+        #project .card {
+            transition: all 0.25s ease;
+        }
+
+        #project .card:hover {
+            background-color: rgba(0, 0, 0, 0.9) !important;
+        }
+
+        @media (min-width: 768px) {
+            #post {
+                margin: auto 2.5vmax;
+            }
+        }
+
+        #post a {
+            text-decoration: underline;
+        }
+
+        #post #title {
+            text-decoration: none;
+        }
+
+        #post .title {
+            margin: auto;
+        }
+
+        #post #post-image {
+            border-radius: 0.25rem;
+        }
+
+        #post .subtitle {
+            letter-spacing: 0.05rem;
+        }
+
+        #post #description {
+            margin-bottom: 1.25vmax;
+        }
+
+        #post .tag {
+            margin: 0.15rem auto;
+        }
+
+        #post .content ol,
+        #post .content ul,
+        #post .content blockquote {
+            display: inline-block;
+        }
+
+        #post .content hr {
+            background-color: grey;
+        }
+
+        #post .content img,
+        #post .content iframe {
+            max-width: calc(100% - 25vw);
+            margin: 0.25rem auto;
+        }
+
+        @media (max-width: 768px) {
+
+            #post .content img,
+            #post .content iframe {
+                max-width: calc(100% - 5vw);
+            }
+        }
+
+        #post .content ul,
+        #post .content ol {
+            display: inline-block;
+        }
+
+        #post .container {
+            margin: 2.5rem auto;
+            word-break: break-word;
+            max-width: -webkit-fill-available;
+        }
+
+        #post #disqus_thread {
+            margin-top: 5vmax;
+        }
+
+        #page-section .content ul,
+        #page-section .content ol,
+        #page-section .content blockquote {
+            display: inline-block;
+        }
+
+        .has-image-centered {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+    <script> document.addEventListener('DOMContentLoaded', function () { /* Get all "navbar-burger" elements */ var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0); /* Check if there are any navbar burgers */ if ($navbarBurgers.length > 0) { /* Add a click event on each of them */ $navbarBurgers.forEach(function ($el) { $el.addEventListener('click', function () { /* Get the target from the "data-target" attribute */ var target = $el.dataset.target; var $target = document.getElementById(target); /* Toggle the class on both the "navbar-burger" and the "navbar-menu" */ $el.classList.toggle('is-active'); $target.classList.toggle('is-active'); }); }); } });</script>
+    <section class="hero is-fullheight has-text-centered" id="hero">
+        <div class="hero-body">
+            <div class="container">
+                <div
+                    class="column is-one-fifth-desktop is-one-fifth-tablet is-one-fifth-fullhd has-image-centered animate__animated animate__backInDown">
+                    <figure class="image"> <img class="is-rounded" src="{% for i in about %}{{i.logo_link}}{% endfor %}"
+                            alt="Hanzla Anjum">
+                    </figure>
+                </div>
+                <h1
+                    class="subtitle has-text-white is-size-3 is-uppercase has-text-weight-normal is-marginless animate__animated animate__backInUp">
+                    <span id="typed"></span>
+                </h1>
+                <hr> <a href="#about"
+                    class="button is-white is-rounded is-outlined is-uppercase has-text-weight-normal animate__animated animate__backInUp">Read
+                    More</a> <br> <br>
+
+            </div>
+        </div>
+    </section>
+    <section class="hero is-fullheight has-text-centered has-background-dark" id="about">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns">
+                    <div
+                        class="column is-one-fifth-desktop is-one-fifth-tablet is-one-fifth-fullhd animate__animated animate__backInLeft">
+                        <figure class="image"> <img class="is-rounded"
+                                src="{% for i in about %}{{i.profile_image_link}}{% endfor %}"
+                                alt="Hanzla Anjum" style="
+                            width: 148px;
+                            height: 143px;
+                        ">
+                        </figure>
+                    </div>
+                    <div
+                        class="column has-text-white has-text-left-desktop has-text-left-tablet has-text-left-fullhd has-text-left-widescreen animate__animated animate__backInRight">
+                        <p>
+                            {% for i in about %}
+                            {{i.bio_data}}
+                            {% endfor %}
+                        </p><br>
+                        <div class="container columns is-centered animate__animated animate__backInUp">
+                            <div> <a href="#contact"
+                                    class="button is-rounded is-uppercase has-text-weight-normal is-white is-outlined">Contact
+                                    Me</a> </a></div>
+                            <div> <a href="/project"
+                                    class="button is-rounded is-uppercase has-text-weight-normal is-white is-outlined">My
+                                    Projects</a>
+                                </a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class="hero is-fullheight has-text-centered has-background-black-ter" id="contact">
+        <div class="hero-body">
+            <div class="container"> <a id="contact-button" href="https://t.me/HanzlaAnjum28"
+                    class="button is-rounded is-uppercase has-text-weight-normal is-white is-outlined has-text-weight-semibold column is-two-fifths"
+                    target="_blank"> <i class="fab fa-telegram"></i>Ping me on Telegram </a> <a id="contact-button"
+                    href="https://www.instagram.com/hanzla_anjum016/"
+                    class="button is-rounded is-uppercase has-text-weight-normal is-white is-outlined has-text-weight-semibold column is-two-fifths"
+                    target="_blank"> <i class="fab fa-instagram"></i>Follow me on Instagram </a> <a id="contact-button"
+                    href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRzCpJLWfbTbXHtNdJMlhsdcBbDWXfzTzFWRBwnbptCbmpPcwlSVjwFQqKWtRfqhWKRkppDs"
+                    class="button is-rounded is-uppercase has-text-weight-normal is-white is-outlined has-text-weight-semibold column is-two-fifths"
+                    target="_blank"> <i class="fas fa-envelope"></i>Send me an Email </a> <a id="contact-button"
+                    href="https://www.twitter.com/intent/tweet?screen_name=Hanzlaanjum1"
+                    class="button is-rounded is-uppercase has-text-weight-normal is-white is-outlined has-text-weight-semibold column is-two-fifths"
+                    target="_blank"> <i class="fab fa-twitter"></i>Tweet me on Twitter </a>
+                <hr>
+                <h3 class="is-size-5 is-uppercase has-text-weight-semibold has-text-white is-marginless"> You Can find
+                    me here</h3>
+                <div class="column is-full is-size-3"> <a href="http://www.twitter.com/Hanzlaanjum1" target="_blank"
+                        class="has-text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/hanzla_anjum016/" target="_blank" class="has-text-white"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/hanzla-anjum-403338226/" target="_blank"
+                        class="has-text-white"><i class="fab fa-linkedin"></i></a>
+                    <a href="http://www.github.com/hanzla-anjum016" target="_blank" class="has-text-white"><i
+                            class="fab fa-github"></i></a>
+                    <a href="http://www.youtube.com" target="_blank"
+                        class="has-text-white"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.reddit.com/user/DistributionParty920" target="_blank" class="has-text-white"><i
+                            class="fab fa-reddit"></i></a>
+                    <a href="" target="_blank" class="has-text-white"><i
+                            class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Footer begins here-->
+    <footer id="footer" class="has-background-black-ter">
+        <!--Footer Button-->
+        <div class="container has-text-centered has-text-white" id="backtotop"> <a class="has-text-white"
+                onclick="window.scroll(0,0)">BACK TO TOP</a></div>
+        <!--Footer Main Section-->
+        <div class="has-background-black-bis">
+            <div class="container columns">
+                <!--Name Section-->
+                <div class="column has-text-left-desktop has-text-centered-mobile"> <a href="/#about">
+                        <div class="columns">
+                            <div class="column is-one-fifth-desktop is-one-fifth-fullhd is-one-quarter-tablet">
+                                <figure class="image is-64x64"> <img class="is-rounded"
+                                        src="{% for i in about %}{{i.profile_image_link}}{% endfor %}"
+                                        style="height: 59px; width: 60px;">
+                                </figure>
+                            </div>
+                            <div class="column is-marginless">
+                                <h5 class="has-text-grey-lighter">Hanzla Anjum</h5>
+                                <div class="content has-text-grey">
+                                    <p>Hanzla Anjum is young and passionate Python coder, who has a good command in
+                                        Python,
+                                        HTML,...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a></div>
+                <!--Link Section-->
+                <div class="column has-text-white">
+                    <h3>More Links</h3>
+                    <li> <a target="_blank" href="https://www.instagram.com/hanzla_anjum016/">Follow me on instagram</a></li>
+                    <li> <a target="_blank" href="https://github.com/hanzla-anjum016">Star me on Github</a></li>
+                </div>
+                <!--Blog-post Section-->
+                <div class="column has-text-white">
+                    <h3>My Projects</h3>
+                    <li> <a href="/project">Virtual AI Assistant</a></li>
+                    <li> <a href="/project">Face Recognitor</a></li>
+                </div>
+            </div>
+        </div>
+        <div class="has-background-black has-text-centered has-text-white" id="credits"> <i
+                class="far fa-copyright"></i> 2021 | Hanzlaanjum0012.com
+    </footer>
+</body>
+<script> window.addEventListener("scroll", function (event) { var scroll = this.scrollY; var item = document.getElementsByClassName('navbar-item'); /* console.log(scroll); */ if (scroll < 565) { item[1].classList.add('is-active'); item[2].classList.remove('is-active'); item[3].classList.remove('is-active'); } if (scroll > 565 && scroll < 1130) { item[1].classList.remove('is-active'); item[2].classList.add('is-active'); item[3].classList.remove('is-active'); } if (scroll > 1130) { item[1].classList.remove('is-active'); item[2].classList.remove('is-active'); item[3].classList.add('is-active'); } });</script>
+<!-- Typed.js DONT TOUCH THIS! -->
+<div id="typed-strings"></div>
+<script> var typed = new Typed('#typed', { strings: ["Hello, Guys!", "I am Hanzla Anjum ", "I am a Passionate Coder!", "I am an enthusiastic Techie!", "Welcome To My page!", "Checkout My Projects!", "Thanks for visiting my page!"], backSpeed: 25, smartBackspace: true, backDelay: 1500, startDelay: 1000, typeSpeed: 15, loop: true, });</script>
+
+</html>

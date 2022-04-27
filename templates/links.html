@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Include Meta Tags Here -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1 user-scalable=no, shrink-to-fit=no">
+    <meta content='#000000' name='theme-color' />
+    <title>Hanzla Anjum | Links</title>
+    <link rel="shortcut icon" href="{% for i in about %}{{i.shortuct_icon_link}}{% endfor %}"
+        onError="this.onerror=null;this.src='https://i.redd.it/raacom40w5181.png';" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="/css/links.css"> -->
+    <script src="https://kit.fontawesome.com/609f7f6148.js" crossorigin="anonymous"></script>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins");
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/0.0.0-5a9c68d/base.css");
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/0.0.0-5a9c68d/components.min.css");
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/0.0.0-5a9c68d/utilities.min.css");
+        /* @tailwind base;
+        @tailwind components;
+        @tailwind utilities; */
+
+        body,
+        html {
+            font-family: "Poppins", sans-serif;
+        }
+
+        body a,
+        html a {
+            outline: none;
+        }
+
+        body #image,
+        html #image {
+            transition: all 0.5s ease;
+            background-position: center;
+        }
+
+        body #image:hover,
+        html #image:hover {
+            transform: scale(1.05);
+        }
+
+        body #image ::after,
+        html #image ::after {
+            background-color: black;
+        }
+
+        body .links,
+        html .links {
+            transition: all ease 0.25s;
+            text-shadow: 0 0.05rem 0.25rem rgba(0, 0, 0, 0.05);
+        }
+
+        body .links:hover,
+        html .links:hover {
+            transform: scale(1.05);
+        }
+
+        body .links:hover,
+        html .links:hover {
+            text-shadow: 0 0.15rem 0.5rem rgba(0, 0, 0, 0.15);
+        }
+
+        body .links .fa-hand-paper,
+        html .links .fa-hand-paper {
+            -moz-transform: scale(-1, 1) rotate(45deg);
+            -webkit-transform: scale(-1, 1) rotate(45deg);
+            -o-transform: scale(-1, 1) rotate(45deg);
+            -ms-transform: scale(-1, 1) rotate(45deg);
+            transform: scale(-1, 1) rotate(45deg);
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white">
+    <div class="mx-auto my-auto w-screen">
+        <div class="grid place-content-center min-w-full min-h-full py-10 px-7 my-auto min-h-screen absolute z-0">
+            <div class="bg-black h-full min-w-full absolute z-10"
+                style="background-image: url(https://source.unsplash.com/random); filter: blur(px); background-position: center; background-size: cover;">
+            </div>
+            <div class="bg-black h-full w-full absolute z-20 opacity-60"></div>
+            <span class="text-center z-30">
+                <a href="/">
+                    <img id="image" class="2xl:w-1/6 xl:w-1/6 lg:w-1/5 md:w-1/3 w-1/2 sm:1/2 rounded-full m-auto shadow-2xl lg:border-2 md:border-2 sm:border-2" src="{% for i in about %}{{i.profile_image_link}}{% endfor %}" onerror="this.onerror=null;this.src='https://i.redd.it/e6z17qce62181.png';" alt="Hanzla Anjum" style="width: 150px;height: 150px;">
+                </a>
+                <br>
+                <h1 class="text-5xl text-center font-semibold mt-3 mx-auto">Hanzla Anjum</h1>
+                <hr class="my-2 opacity-25">
+                <p class="text-base break-words inline-flex font-normal mt-1.5 mx-auto text-center opacity-50 2xl:w-5/12 xl:w-5/12 md:w-6/12 sm:w-full">
+                    Hello, I'm Hanzla. I'm a passionate coder who loves to imagine things.
+                </p>
+                <div class="grid 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 my-7">
+                    {% for i in links %}
+                    <a class="flex" href="{{i.link}}" target="_blank" rel="noopener noreferrer"> 
+                        <button id="links" class="links lg:m-5 md:5 sm:3.5 text-white hover:opacity-75 font-semibold my-2.5 mx-5 px-5 py-1.5 rounded-md w-full place-content-center h-14 w-32" style="background-color: {{i.color_code}};-webkit-box-shadow: 0px 10px 25px 0px {{i.shadow_color_code}};-moz-box-shadow: 0px 10px 25px 0px {{i.shadow_color_code}};box-shadow: 0px 10px 25px 0px {{i.shadow_color_code}};">
+                            <span id="link-content" style="color: {{i.text_color_code}};">
+                                <i class="{{i.favicon}} align-middle"></i>
+                                <span class="mx-1.5 align-middle">{{i.name}}</span> 
+                            </span> 
+                        </button>
+                    </a>
+                    {% endfor %}
+                </div>
+            </span>
+        </div>
+    </div>
+</body>
+
+</html>
